@@ -14,5 +14,6 @@ fun main() {
 fun Application.module() {
     configureRouting()
     configureSerialization()
-//    Request()
+    configureResourceDemo()
+    ConfiguretionReverseRouting()
 }
