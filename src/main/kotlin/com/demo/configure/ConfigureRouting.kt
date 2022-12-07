@@ -8,5 +8,8 @@ fun Application.configureRouting() {
 
     routing {
         customerRouting()
+        listOrdersRoute()
+        getOrderRoute()
+        totalizeOrderRoute()
     }
 }
