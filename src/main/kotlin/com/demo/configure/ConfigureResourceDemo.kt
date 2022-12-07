@@ -1,33 +1,13 @@
 package com.demo.configure
 
+import com.demo.model.*
 import io.ktor.http.*
-import io.ktor.resources.*
 import io.ktor.server.application.*
-import io.ktor.server.html.*
 import io.ktor.server.resources.*
-import io.ktor.server.resources.Resources
 import io.ktor.server.resources.post
 import io.ktor.server.resources.put
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import kotlinx.html.*
-import kotlinx.serialization.*
-
-@Serializable
-@Resource("/articles")
-class Articles(val sort: String? = "new") {
-    @Serializable
-    @Resource("new")
-    class New(val parent: Articles = Articles())
-
-    @Serializable
-    @Resource("{id}")
-    class Id(val parent: Articles = Articles(), val id: Long) {
-        @Serializable
-        @Resource("edit")
-        class Edit(val parent: Id)
-    }
-}
 
 fun Application.configureResourceDemo() {
     install(Resources)

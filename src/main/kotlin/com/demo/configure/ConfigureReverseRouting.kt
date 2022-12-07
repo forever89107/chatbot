@@ -1,5 +1,6 @@
 package com.demo.configure
 
+import com.demo.model.*
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.html.*
@@ -7,7 +8,6 @@ import io.ktor.server.resources.*
 import io.ktor.server.routing.*
 import kotlinx.html.*
 fun Application.ConfiguretionReverseRouting(){
-    install(Resources)
     routing {
         // Building links from resources
         get {
